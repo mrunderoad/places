@@ -1,9 +1,15 @@
 h1 {
   text-align: center;
   font-size: 60px;
-  font-family: cursive;
+  font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
 }
 
 .jumbotron {
   margin-top: 15px;
+  background-image: url(https://wc.wallpaperuse.com/wallp/80-801948_s.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  border: 10px outset turquoise;
+  border-radius: 50px;
 }
+
