@@ -13,3 +13,11 @@ h1 {
   border-radius: 50px;
 }
 
+.prop, .prop1, .prop2, .prop3 {
+  display: none;
+}
+
+.btn {
+  background-color: grey;
+}
+
