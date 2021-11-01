@@ -1,0 +1,9 @@
+h1 {
+  text-align: center;
+  font-size: 60px;
+  font-family: cursive;
+}
+
+.jumbotron {
+  margin-top: 15px;
+}
