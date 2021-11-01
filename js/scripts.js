@@ -13,15 +13,21 @@ let obj2 = new Place("Seattle, Washington", ["Pikes Place", "Space needle"], "Ju
 let obj3 = new Place("Amsterdam, Netherlands", ["Canals", "Van Gogh Museum"], "October 2019", "A magical fun-filled city. Try the Dutch apple pie!");
 
 
-// function displayPlaceTest(objName){
-//     $("#place").append("<a id='&quot;'+objName+'&quot;'>" + objName.location + "</a>" + "</br>");
-//     $('#'+'&quot;'+objName+'&quot;').append("<p class='&quot;'+objName+'&quot;'>" + "Landmarks: " + objName.landmarks.join(", ") + "</p>");
-//     $("#"+objName+"&quot;").append("<p class='&quot;'+objName+'&quot;'>" + "Time visited: " + objName.timeOfYear + "</p>");
-//     $("#"+objName+"&quot;").append("<p class='&quot;'+objName+'&quot;'>" + "Notes: " +objName.notes + "</p>");
-//     $("#"+objName+"&quot;").click(function(){
-//         $("."+objName+"&quot;").toggle();
-//     });
-// };
+let newObjCounter=0;
+
+function displayPlaceTest(objName){
+    newObjCounter +=1
+    let newObj = "newObj"
+    newObj = newObj+ newObjCounter;
+    $("#place").append("<a id='"+newObj+"' >" + objName.location + "</a>" + "</br>");
+    $("#"+newObj).append("<p class='"+newObj+"' >" + "Landmarks: " + objName.landmarks.join(", ") + "</p>");
+    $("#"+newObj).append("<p class='"+newObj+"' >"+ "Time visited: " + objName.timeOfYear + "</p>");
+    $("#"+newObj).append("<p class='"+newObj+"' >" + "Notes: " +objName.notes + "</p>");
+    $("."+newObj).css("display","none");
+    $("#"+newObj).click(function(){
+        $("."+newObj).toggle();
+    });
+};
 
 function displayPlaces(){
     $("#place").append("<a id='obj1'>" + obj1.location + "</a>" + "</br>");
@@ -58,12 +64,8 @@ $(document).ready(function(){
         const time= $("#time").val();
         const notes= $("#notes").val();
         let obj4 = new Place(loc, arrayLandmarks, time, notes);
-        $("#place").append("<a id='obj4'>" + obj4.location + "</a>" +"</br>");
-        $("#obj4").append("<p class='prop3'>" + "Landmarks: " + obj4.landmarks.join(", ") + "</p>");
-        $("#obj4").append("<p class='prop3'>" + "Time visited: " + obj4.timeOfYear + "</p>");
-        $("#obj4").append("<p class='prop3'>" + "Notes: " +obj4.notes + "</p>");
-      $("#obj4").click(function(){
-        $(".prop3").toggle();
-    });
+
+        displayPlaceTest(obj4);
+
     })
 });
