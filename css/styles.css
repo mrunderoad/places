@@ -5,7 +5,7 @@ h1 {
 }
 
 .jumbotron {
-  margin-top: 15px;
+  margin-top: 25px;
   background-image: url(https://wc.wallpaperuse.com/wallp/80-801948_s.jpg);
   background-repeat: no-repeat;
   background-size: cover;
@@ -25,6 +25,8 @@ h1 {
   font-size: 25px;
   text-align: center;
   font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  margin-bottom: 100px;
+  margin-top: 50px;
 }
 
 p {
